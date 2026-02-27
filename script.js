@@ -63,3 +63,23 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(aboutSection);
+
+
+// Stagged fade + Slide Up Animation in Skills Section
+
+const skillCards = document.querySelectorAll(".skill-card");
+
+window.addEventListener("scroll", () => {
+    skillCards.forEach((card, index) => {
+        const trigger = window.innerHeight * 0.85;
+        const top = card.getBoundingClientRect().top;
+
+        if (top < trigger) {
+            setTimeout(() => {
+                card.classList.add("show");
+            }, index * 100)
+        } else {
+            card.classList.remove("show")
+        }
+    });
+});

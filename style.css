@@ -189,13 +189,13 @@ html {
 }
 
 
-/*----------Home Section----------*/
+/*----------About Section----------*/
 
 .about {
     padding: 100px 10%;
     background-color: #111827;
     color: white;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 .section-title {
@@ -239,7 +239,7 @@ html {
     margin-bottom: 10px;
 }
 
-/* -----Make the Hero Section Mobile Responsive----- */
+/* -----Make the About Section Mobile Responsive----- */
 
 @media (max-width: 768px) {
     .about-container {
@@ -257,17 +257,95 @@ html {
 .about-image {
     transform: translateX(-80px);
     opacity: 0;
-    transition: all 0.8s ease;
+    transition: all 1.3s ease;
 }
 
 .about-content {
     transform: translateX(80px);
     opacity: 0;
-    transition: all 0.8s ease;
+    transition: all 1.3s ease;
 }
 
 .about.show .about-image,
 .about.show .about-content {
     transform: translateX(0);
     opacity: 1;
+}
+
+/*----------Skills Section----------*/
+
+.skills {
+    padding: 100px 10%;
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.skill-card {
+    background-color: #1e293b;
+    padding: 40px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.skill-card i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #00adb5;
+}
+
+.skill-card h3 {
+    font-size: 18px;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background-color: #00adb5;
+}
+
+.skill-card:hover i,
+.skill-card:hover h3 {
+    color: white;
+}
+
+/* -----Make the Skills Section Mobile Responsive----- */
+
+@media (max-width: 1024px) {
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Stagged fade + Slide Up Animation in Skills Section */
+.skill-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.skill-card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
