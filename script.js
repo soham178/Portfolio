@@ -18,7 +18,7 @@ toggle.addEventListener("click", () => {
 
 // Typing Animation
 
-const words = ["Web Developer", "IT Student", "Full Stack Learner"]
+const words = ["Full Stack Developer", "Problem Solver", "Tech Enthusiast"]
 let i = 0;
 let j = 0;
 let currentWord = "";
