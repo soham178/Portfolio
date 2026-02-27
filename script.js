@@ -83,3 +83,29 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+
+
+const educationSection = document.querySelector("#education");
+const timeline = document.querySelector(".timeline");
+const cards = document.querySelectorAll(".timeline-card");
+
+function handleScroll() {
+    const sectionTop = educationSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight * 0.8;
+
+    if (sectionTop < triggerPoint) {
+        timeline.classList.add("active");
+
+        cards.forEach((card, index) =>{
+            setTimeout(() => {
+                card.classList.add("show");
+            }, index * 200);
+        });
+    } else{
+        timeline.classList.remove("active");
+        cards.forEach(card => card.classList.remove("show"));
+    }
+}
+
+window.addEventListener("scroll", handleScroll);

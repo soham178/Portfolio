@@ -349,3 +349,125 @@ html {
     opacity: 1;
     transform: translateY(0);
 }
+
+/*----------Education Section----------*/
+
+.education {
+    padding: 100px 10%;
+    background-color: #111827;
+    color: white;
+    min-height: 100vh;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 50px;
+    padding-left: 40px;
+    border-left: 3px solid #00adb5;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.4s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-card img {
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.timeline-text h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.timeline-text p {
+    margin-top: 8px;
+    color: #ccc;
+}
+
+/* -----Make the Education Section Mobile Responsive----- */
+
+@media (max-width: 768px) {
+
+    .education {
+        padding: 60px 20px;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .timeline-item {
+        margin-bottom: 20px;
+    }
+
+    .timeline-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .timeline-card img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .timeline-text h3 {
+        font-size: 18px;
+    }
+
+    .timeline-text span {
+        font-size: 14px;
+    }
+
+    .timeline-text p {
+        font-size: 14px;
+    }
+}
+
+/* Timeline Line Animation for Education Section */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: 0;
+    width: 3px;
+    height: 0;
+    background-color: #00adb5;
+    transition: height 1s ease;
+}
+
+.timeline.active::before {
+    height: 100%;
+}
+
+.timeline-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
