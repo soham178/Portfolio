@@ -35,9 +35,19 @@ html {
 }
 
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
+.logo span {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00adb5, #00f2ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.logo span:hover {
+    text-shadow: 0 0 10px #00f2ff;
 }
 
 .nav-links {
@@ -576,17 +586,6 @@ html {
 
 /* Scroll Animation for the Contact Section  */
 
-/* .contact {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.contact.show {
-    opacity: 1;
-    transform: translateY(0);
-} */
-
 .contact-image {
     opacity: 0;
     transform: translateX(-60px);
@@ -609,3 +608,173 @@ html {
     transform: translateX(0);
 }
 
+
+/*----------Footer Section----------*/
+
+.footer {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ccc;
+    padding: 60px 10% 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 260px;
+}
+
+.footer-col h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #d1d5db;
+}
+
+.footer-tagline {
+    color: #00adb5;
+    margin-top: 10px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #00adb5;
+    padding-left: 5px;
+}
+
+.footer-links a i {
+    margin-right: 8px;
+    color: #00adb5;
+    font-size: 14px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    color: #d1d5db;
+    letter-spacing: 0 !important;
+    text-transform: lowercase !important;
+}
+
+.contact-info i {
+    color: #00adb5;
+    font-size: 16px;
+    min-width: 20px;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    background: #1e293b;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #00adb5;
+    transform: translateY(-6px);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #334155;
+    margin-top: 40px;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* heart animation in the footer section */
+
+.heart {
+    display: inline-block;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1);}
+    25% { transform: scale(1.2);}
+    40% { transform: scale(1);}
+    60% { transform: scale(1.2);}
+    100% { transform: scale(1);}
+}
+
+/* -----Make the Footer Section Mobile Responsive----- */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons a {
+        margin: 5px;
+    }
+}
+
+
+/* Clean Modern Dark Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00adb5, #00f2ff);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00f2ff, #00adb5);
+    box-shadow: 0 0 10px #00f2ff;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #00adb5 #0f172a;
+}
