@@ -13,6 +13,8 @@ body {
     padding-top: 80px;
 }
 
+/* ----------Header Section---------- */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -26,10 +28,12 @@ body {
     z-index: 1000;
 }
 
-.navbar.scrolled {
+/* Navbar color change on scroll */
+.navbar.scrolled { 
     background-color: #111;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
+
 
 .logo {
     font-size: 22px;
@@ -62,6 +66,8 @@ body {
     cursor: pointer;
 }
 
+    /* -----Make the Header Mobile Responsive----- */
+
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
@@ -73,6 +79,11 @@ body {
         align-items: center;
         display: none;
         padding: 20px 0;
+    }
+
+    .nav-links a:hover {
+    background-color: #383838;
+    color: #00adb5;
     }
 
     .nav-links.active {
