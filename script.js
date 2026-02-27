@@ -85,6 +85,7 @@ window.addEventListener("scroll", () => {
 });
 
 
+// Timeline Line Animation for Education Section
 
 const educationSection = document.querySelector("#education");
 const timeline = document.querySelector(".timeline");
@@ -109,3 +110,35 @@ function handleScroll() {
 }
 
 window.addEventListener("scroll", handleScroll);
+
+
+//  Scroll Animation for the Contact Section 
+
+const contactSection = document.querySelector(".contact");
+const contactImage = document.querySelector(".contact-image");
+const contactForm = document.querySelector(".contact-form");
+
+const ContactObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                contactImage.classList.add("show");
+
+                setTimeout(() => {
+                    contactForm.classList.add("show");
+                }, 200);
+
+            } else {
+                contactImage.classList.remove('show')
+                contactForm.classList.remove('show')
+            }
+        });
+
+    },
+    {
+        threshold: 0.3
+    }
+);
+
+ContactObserver.observe(contactSection);

@@ -560,6 +560,7 @@ html {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* -----Make the Education Section Mobile Responsive----- */
 
 @media (max-width: 768px) {
 
@@ -572,3 +573,39 @@ html {
         max-width: 300px;
     }
 }
+
+/* Scroll Animation for the Contact Section  */
+
+/* .contact {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact.show {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+.contact-image {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 1s ease;
+}
+
+.contact-image.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contact-form {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 1s ease;
+}
+
+.contact-form.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
